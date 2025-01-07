@@ -1,3 +1,5 @@
+-- ys-3dskit toolchain definition 2025-01-07
+
 local DEVKITPRO = os.getenv("DEVKITPRO")
 if not DEVKITPRO then
 	DEVKITPRO = "/opt/devkitpro"
