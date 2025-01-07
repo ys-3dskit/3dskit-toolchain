@@ -1,4 +1,4 @@
--- ys-3dskit toolchain definition 2025-01-07
+-- ys-3dskit toolchain definition 2025-01-07-2
 
 local DEVKITPRO = os.getenv("DEVKITPRO")
 if not DEVKITPRO then
@@ -28,7 +28,7 @@ toolchain("devkitarm")
 
 	local arch = { "-march=armv6k", "-mtune=mpcore", "-mtp=soft", "-mfloat-abi=hard" }
 
-	local c_flags = { arch, "-g", "-Wall", "-mword-relocations", "-ffunction-sections"}
+	local c_flags = table.join(arch, { "-g", "-Wall", "-mword-relocations", "-ffunction-sections"})
 
 	add_cxflags(c_flags)
 	add_asflags(c_flags)
